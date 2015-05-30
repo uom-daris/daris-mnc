@@ -13,6 +13,8 @@
 # Check if server version is no less than the required version
 # ============================================================================
 
+source old-release-cleanup.tcl
+
 # ============================================================================
 # Include the utils.tcl functions
 # ============================================================================
@@ -49,10 +51,11 @@ if { $addStudyTypes == 1 } {
 # ============================================================================
 set plugin_label      [string toupper PACKAGE_$package]
 set plugin_namespace  mflux/plugins
-set plugin_zip        mnc-pssd-plugin.zip
-set plugin_jar        mnc-pssd-plugin.jar
+set plugin_zip        daris-mnc-plugin.zip
+set plugin_jar        daris-mnc-plugin.jar
 set module_class      mnc.mf.plugin.pssd.PSSDPluginModule
-loadPlugin $plugin_namespace $plugin_zip $plugin_jar $module_class $plugin_label
+set plugin_libs       { daris-commons.jar }
+loadPlugin $plugin_namespace $plugin_zip $plugin_jar $module_class $plugin_label $plugin_libs
 srefresh
 
 #=============================================================================
