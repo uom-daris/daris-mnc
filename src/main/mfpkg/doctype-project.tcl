@@ -55,7 +55,7 @@ asset.doc.type.update :create yes :type mnc:project \
         < \
           :restriction -base "enumeration" \
           < \
-            :dictionary "pssd.research.organization" \
+            :dictionary "daris:pssd.research.organization" \
           > \
         > \
         :element -name "department" -type "string" -min-occurs "0" -max-occurs "1" \
@@ -148,7 +148,7 @@ asset.doc.type.update :create yes :type mnc:project \
     < \
       :restriction -base "enumeration" \
       < \
-        :dictionary "pssd.ANZSRC.Division-11.field-of-research" \
+        :dictionary "daris:pssd.ANZSRC.Division-11.field-of-research" \
       > \
     > \
        :element -name "subject_selection_crteria" -type "document" -index "true" -min-occurs "0" \
